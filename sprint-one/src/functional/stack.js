@@ -10,7 +10,7 @@ var Stack = function() {
   };
 
   someInstance.pop = function() {
-    storage.pop();
+    return storage.pop();
   };
 
   someInstance.size = function() {
