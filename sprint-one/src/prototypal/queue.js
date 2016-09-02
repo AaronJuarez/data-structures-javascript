@@ -1,21 +1,22 @@
 var Queue = function() {
-  var someInstance = Object.create(Queue.prototype);
-  someInstance.storage = [];
 
-  return someInstance;
+	var someInstance = Object.create(queueMethods);
+	someInstance.storage = [];
+
+	return someInstance;
 };
 
-var queueMethods = {};
+var queueMethods = {
 
-Queue.prototype.enqueue = function(value) {
-	this.storage.push(value);
-}
+	enqueue : function(value) {
+		this.storage.push(value);
+	},
+	dequeue : function() {
+		return this.storage.shift();
+	},
+	size : function() {
+		return this.storage.length;
+	}
 
-Queue.prototype.dequeue = function() {
-	return this.storage.shift();
-}
-
-Queue.prototype.size = function() {
-	return this.storage.length;
-}
+};
 
