@@ -1,6 +1,6 @@
 var Stack = function() {
 	var someInstance = Object.create(Stack.prototype);
-	someInstance.store = [];
+	someInstance.storage = [];
 
 	return someInstance;
 };
@@ -8,15 +8,15 @@ var Stack = function() {
 var stackMethods = {};
 
 Stack.prototype.push = function(value) {
-	this.store.push(value);
+	this.storage.push(value);
 }
 
 Stack.prototype.pop = function() {
-	return this.store.pop();
+	return this.storage.pop();
 }
 
 Stack.prototype.size = function() {
-	return this.store.length;
+	return this.storage.length;
 }
 
 

@@ -1,17 +1,17 @@
 var Stack = function() {
-	this.store = [];
+	this.storage = [];
 };
 
 Stack.prototype.push = function(value) {
-	this.store.push(value);
+	this.storage.push(value);
 }
 
 Stack.prototype.pop = function() {
-	return this.store.pop();
+	return this.storage.pop();
 }
 
 Stack.prototype.size = function() {
-	return this.store.length;
+	return this.storage.length;
 }
 
 
