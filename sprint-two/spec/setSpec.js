@@ -14,6 +14,7 @@ describe('set', function() {
   it('should add values to a set', function() {
     set.add('Susan Sarandon');
     set.add('Danny Glover');
+    console.log(set.contains('Danny Glover'));
     expect(set.contains('Danny Glover')).to.equal(true);
     expect(set.contains('Susan Sarandon')).to.equal(true);
   });

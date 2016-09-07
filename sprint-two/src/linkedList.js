@@ -16,15 +16,13 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-    console.log('begin removeHead');
+
     var current = this.tail;
     var temp = null;
 
     if(current !== null) {
-      console.log('current is ' + current.value);
 
       if(current === this.head) {
-        console.log('current is head ' + this.head.value + ' ' + this.tail.value);
         temp = current;
         this.tail = null;
         this.head = null;
@@ -32,7 +30,6 @@ var LinkedList = function() {
       }
 
       while(current.next !== this.head) {
-        console.log('next is not head');
         current = current.next;
        }
 
@@ -41,7 +38,7 @@ var LinkedList = function() {
       this.head = current;
 
     }
-    console.log('finish removeHead');
+
     return temp.value;
   };
 
@@ -61,7 +58,6 @@ var LinkedList = function() {
     var current = this.tail;
 
     while(current !== null) {
-      console.log(current.value + " ");
       current = current.next;
     }
   }

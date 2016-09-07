@@ -26,13 +26,9 @@ describe('linkedList', function() {
   it('should remove the head from the list when removeHead is called', function() {
     linkedList.addToTail(4);
     linkedList.addToTail(5);
-    console.log('displaying');
     linkedList.display();
-    console.log('head ' + linkedList.head.value);
-    console.log('tail ' + linkedList.tail.value);
     expect(linkedList.head.value).to.equal(4);
     linkedList.removeHead();
-    console.log('head ' + linkedList.head.value);
     expect(linkedList.head.value).to.equal(5);
   });
 
