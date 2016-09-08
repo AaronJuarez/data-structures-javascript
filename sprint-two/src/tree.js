@@ -15,19 +15,10 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
-	var current;
-	var containsElement;
-
-	if (current === undefined) {
-		current = this;
-		containsElement = false;
-	}
-	console.log(current);
-	console.log('target ' + target);
-	console.log('value ' + current.value);
+	var current = this;
+	var containsElement = false;
 
 	if (current.value === target) {
-		console.log('into it')
 		containsElement = true;
 		return containsElement;
 
@@ -37,11 +28,12 @@ treeMethods.contains = function(target) {
 			for(var i = 0; i<current.children.length; i++) {
 				current = current.children[i];
 				containsElement = current.contains(target);
-				console.log('containsElement is ' + containsElement)
-				return containsElement;
+				current = this;
+
+				if (containsElement === true) {
+					break;
+				}
 			}
-		}else {
-			console.log('into else');
 		}
 	}
 	return containsElement;
