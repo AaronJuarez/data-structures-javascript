@@ -4,7 +4,7 @@ describe('tree', function() {
   beforeEach(function() {
     tree = Tree();
   });
-
+/*
   it('should have methods named "addChild" and "contains", and a property named "value"', function() {
     expect(tree.addChild).to.be.a('function');
     expect(tree.contains).to.be.a('function');
@@ -18,6 +18,7 @@ describe('tree', function() {
 
   it('should return true for a value that the tree contains', function() {
     tree.addChild(5);
+    console.log(tree.contains(5));
     expect(tree.contains(5)).to.equal(true);
   });
 
@@ -31,7 +32,7 @@ describe('tree', function() {
     tree.children[0].addChild(6);
     expect(tree.children[0].children[0].value).to.equal(6);
   });
-
+*/
   it('should correctly detect nested children', function() {
     tree.addChild(5);
     tree.addChild(6);

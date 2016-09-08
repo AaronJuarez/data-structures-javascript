@@ -56,7 +56,6 @@ BinarySearchTree.prototype.preorder = function(currentNode, callback) {
 	var current = currentNode;
 
 	if (current !== null) {
-		console.log(callback);
 		callback(current.value);
 		this.preorder(current.left, callback);
 		this.preorder(current.right, callback);
