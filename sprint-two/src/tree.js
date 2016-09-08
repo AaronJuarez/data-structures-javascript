@@ -18,10 +18,13 @@ treeMethods.contains = function(target) {
 	var current;
 	var containsElement;
 
-	if (current === undefined || current === null) {
+	if (current === undefined) {
 		current = this;
+		containsElement = false;
 	}
 	console.log(current);
+	console.log('target ' + target);
+	console.log('value ' + current.value);
 
 	if (current.value === target) {
 		console.log('into it')
@@ -31,19 +34,16 @@ treeMethods.contains = function(target) {
 	}else {
 		if (current.children.length > 0) {
 
-			current.children.forEach(function(entry) {
-				current = entry;
+			for(var i = 0; i<current.children.length; i++) {
+				current = current.children[i];
 				containsElement = current.contains(target);
 				console.log('containsElement is ' + containsElement)
 				return containsElement;
-			});
+			}
 		}else {
 			console.log('into else');
-			containsElement = false;
-
 		}
 	}
-	current = null;
 	return containsElement;
 };
 
