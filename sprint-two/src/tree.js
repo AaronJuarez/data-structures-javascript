@@ -2,8 +2,7 @@ var Tree = function(value) {
   var newTree = Object.create(treeMethods);
   newTree.value = value;
 
-  // your code here
-  newTree.children = [];  // fix me
+  newTree.children = [];
 
   return newTree;
 };
